@@ -64,7 +64,7 @@ if (passwordLength < 8 || passwordLength > 128 ) {
   }
 
 }
-return password
+// return password
 
 
 // Add event listener to generate button
