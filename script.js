@@ -1,9 +1,9 @@
 
-chars = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "-", "=", "+", "?", "/", "\"];
+var chars = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "-", "=", "+", "?", "/", "\\"];
 
-Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-Uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var Uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -19,7 +19,7 @@ function writePassword() {
 }
 
 function generatePassword() {
-  let passwordLength = prompt("How long do you want the password to be? Recomended length between 8 and 128 characters for functionality pourposes.");
+  let passwordLength = prompt("How long do you want the password to be? Recommended length between 8 and 128 characters for functionality purposes.");
   console.log(passwordLength)
   if (passwordLength < 8 || passwordLength > 128) {
     console.log("password must be between 8 and 128");
@@ -27,7 +27,7 @@ function generatePassword() {
     console.log("The recommended length between 8 and 128. Please try again.");
     prompt("The recommended length between 8 and 128. Please try again.")
   } 
-}
+// }
  
  
 
@@ -62,23 +62,23 @@ if (passwordLength < 8 || passwordLength > 128 ) {
   }
 
 }
-
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
-function generatePassword (){
-var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLPNOPQRSTUVWXYZ!@#$%^&*()_+?><{}[]"
-var paswordLength = 16; 
-var password = "";
+// function generatePassword (){
+// var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLPNOPQRSTUVWXYZ!@#$%^&*()_+?><{}[]"
+// var paswordLength = 16; 
+// var password = "";
 
-for (var i=0; i<paswordLength; i++){
-  var randomNumber = Math.floor(Math.random() * chars.length);
-  password += chars.substring(randomNumber,randomNumer+1);
-  var randomNumb
-}
-document.getElementsByID("Password").value = password
-}
+// for (var i=0; i<paswordLength; i++){
+//   var randomNumber = Math.floor(Math.random() * chars.length);
+//   password += chars.substring(randomNumber,randomNumer+1);
+//   var randomNumb;
+// }
+// document.getElementsByID("Password").value = password
+// }
 
-}
+// }
