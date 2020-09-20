@@ -19,7 +19,7 @@ function writePassword() {
 }
 
 function generatePassword() {
-  let passwordLength = prompt("How long do you want the password to be? Recommended length between 8 and 128 characters for functionality purposes.");
+  let passwordLength = parseInt(prompt("How long do you want the password to be?"));
   console.log(passwordLength)
   if (passwordLength < 8 || passwordLength > 128) {
     console.log("password must be between 8 and 128");
@@ -27,7 +27,7 @@ function generatePassword() {
     console.log("The recommended length between 8 and 128. Please try again.");
     prompt("The recommended length between 8 and 128. Please try again.")
   } 
-// }
+}
  
  
 
@@ -35,33 +35,34 @@ if (passwordLength < 8 || passwordLength > 128 ) {
   
   if (confirmChars) {
     passwordCharacters = passwordCharacters(Char)
-    console.log(confirmChars)
+    return passwordLength
   } else if (noConfirmChars) {
-    console.log(noConfirmChars)
+    
   }
 
   if (confirmNumbers) {
     passwordNumbers = passwordNumbers(Numbers)
-    console.log(confirmNumbers)
+    return passwordLength
   } else if (noConfirmNumbers) {
-    console.log(noConfirmNumbers)
+    
   }
 
   if (confirmLowerCase) {
     passwordCharacters = passwordCharacters(alphaLower)
-    console.log(confirmLowerCase)
+    return passwordLength
   } else if (noLowerCase) {
-    console.log(noLowerCase)
+    
   }
 
   if (confirmUpperCase) {
     passwordCharacters = passwordCharacters(alphaUpper)
-    console.log(confirmUpperCase)
+    return passwordLength
   } else if (noUpperCase) {
-    console.log(noUpperCase)
+    
   }
 
 }
+return passwordLength
 }
 
 // Add event listener to generate button
