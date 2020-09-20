@@ -1,13 +1,7 @@
 
+chars = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "-", "=", "+", "?", "/", "\"];
 
-var confirmNumber;
-var confirmCharacter;
-var confirmUppercase;
-var confirmLowercase;
-
-character = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "-", "=", "+", "?", "/", "\"];
-
-Number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 Uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
@@ -25,38 +19,66 @@ function writePassword() {
 }
 
 function generatePassword() {
-  let passwordLength = prompt("How long do you want the password to be?");
+  let passwordLength = prompt("How long do you want the password to be? Recomended length between 8 and 128 characters for functionality pourposes.");
   console.log(passwordLength)
-  if (passwordLength < 8 || passwordLength > 128 ) {
+  if (passwordLength < 8 || passwordLength > 128) {
     console.log("password must be between 8 and 128");
-  }
+  } else if (passwordLength > 8 || passwordLength < 128) {
+    console.log("The recommended length between 8 and 128. Please try again.");
+    prompt("The recommended length between 8 and 128. Please try again.")
+  } 
 }
+ 
+ 
 
-var uppers = confirm("Would you like to use uppercase letters?");
-var lowers = confirm("Would you like to use lowercase letters?");
-var numbers = confirm("Would you like to use numbers?");
-var symbols = confirm("Would you like to use special characters?");
+if (passwordLength < 8 || passwordLength > 128 ) {
+  
+  if (confirmChars) {
+    passwordCharacters = passwordCharacters(Char)
+    console.log(confirmChars)
+  } else if (noConfirmChars) {
+    console.log(noConfirmChars)
+  }
 
+  if (confirmNumbers) {
+    passwordNumbers = passwordNumbers(Numbers)
+    console.log(confirmNumbers)
+  } else if (noConfirmNumbers) {
+    console.log(noConfirmNumbers)
+  }
+
+  if (confirmLowerCase) {
+    passwordCharacters = passwordCharacters(alphaLower)
+    console.log(confirmLowerCase)
+  } else if (noLowerCase) {
+    console.log(noLowerCase)
+  }
+
+  if (confirmUpperCase) {
+    passwordCharacters = passwordCharacters(alphaUpper)
+    console.log(confirmUpperCase)
+  } else if (noUpperCase) {
+    console.log(noUpperCase)
+  }
+
+}
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
-// GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
+function generatePassword (){
+var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLPNOPQRSTUVWXYZ!@#$%^&*()_+?><{}[]"
+var paswordLength = 16; 
+var password = "";
 
-// THEN I am presented with a series of prompts for password criteria
+for (var i=0; i<paswordLength; i++){
+  var randomNumber = Math.floor(Math.random() * chars.length);
+  password += chars.substring(randomNumber,randomNumer+1);
+  var randomNumb
+}
+document.getElementsByID("Password").value = password
+}
 
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
-// WHEN prompted for character types to include in the password
-// THEN I choose lowercase, uppercase, numeric, and/or special characters
-// WHEN I answer each prompt
-// THEN my input should be validated and at least one character type should be selected
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
+}
