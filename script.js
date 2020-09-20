@@ -5,8 +5,10 @@ var Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var Lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var Uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var useNumbers = confirm("Would you like to use numbers?")
 
 // Write password to the #password input
 function writePassword() {
@@ -20,16 +22,16 @@ function writePassword() {
 
 function generatePassword() {
   let passwordLength = parseInt(prompt("How long do you want the password to be?"));
-  // console.log(passwordLength)
-  // if (passwordLength < 8 || passwordLength > 128) {
-  //   console.log("password must be between 8 and 128");
-  // } else if (passwordLength > 8 || passwordLength < 128) {
-  //   console.log("The recommended length between 8 and 128. Please try again.");
-  //   prompt("The recommended length between 8 and 128. Please try again.")
-  // } 
-// }
+  console.log(passwordLength)
+  if (passwordLength < 8 || passwordLength > 128) {
+    console.log("password must be between 8 and 128");
+  } else if (passwordLength > 8 || passwordLength < 128) {
+    console.log("The recommended length between 8 and 128. Please try again.");
+    prompt("The recommended length between 8 and 128. Please try again.")
+  } 
+}
  
- 
+var useNumbers = confirm("Would you like to use numbers?")
 
 if (passwordLength < 8 || passwordLength > 128 ) {
   
@@ -63,7 +65,7 @@ if (passwordLength < 8 || passwordLength > 128 ) {
 
 }
 return password
-}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
