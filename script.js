@@ -50,14 +50,14 @@ if (passwordLength < 8 || passwordLength > 128 ) {
   }
 
   if (confirmLowerCase) {
-    passwordCharacters = passwordCharacters(alphaLower)
+    passwordLowerCase = passwordLowerCase(alphaLower)
     console.log(confirmLowerCase)
   } else if (noLowerCase) {
     console.log(noLowerCase)
   }
 
   if (confirmUpperCase) {
-    passwordCharacters = passwordCharacters(alphaUpper)
+    passwordUpperCase = passwordUpperCase(alphaUpper)
     console.log(confirmUpperCase)
   } else if (noUpperCase) {
     console.log(noUpperCase)
